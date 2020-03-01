@@ -1,0 +1,18 @@
+#!/bin/bash
+
+j4-make-config ubuntu
+mv $HOME/.config/i3/config $HOME/.config/i3/config.temp
+$HOME/.config/i3/i3bang.rb
+rm $HOME/.config/i3/config.temp
+mv $HOME/.config/i3/config $HOME/.config/i3/config.og
+mv $HOME/.config/i3/config.base $HOME/.config/i3/config.base.og
+mv $HOME/.config/i3/chromebooki3.base $HOME/.config/i3/config.base
+j4-make-config ubuntu
+mv $HOME/.config/i3/config $HOME/.config/i3/config.temp
+$HOME/.config/i3/i3bang.rb
+rm $HOME/.config/i3/config.temp
+mv $HOME/.config/i3/config $HOME/.config/i3/chromebooki3
+mv $HOME/.config/i3/config.base $HOME/.config/i3/chromebooki3.base
+mv $HOME/.config/i3/config.base.og $HOME/.config/i3/config.base
+mv $HOME/.config/i3/config.og $HOME/.config/i3/config
+

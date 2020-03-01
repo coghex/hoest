@@ -1,0 +1,27 @@
+colorscheme delek
+syntax enable
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=4
+set smarttab
+set number
+set cursorline
+filetype indent on
+set wildmenu
+set showmatch
+set incsearch
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
+set laststatus=2
+nnoremap j gj
+nnoremap k gk
+nnoremap gV `[v`]
+nnoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+nnoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+augroup tags
+au BufWritePost *.hs    silent !init-tags %
+au BufWritePost *.hsc   silent !init-tags %
+augroup END

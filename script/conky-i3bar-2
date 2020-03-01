@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#send header so i3 knows its JSON
+echo '{"version":1}'
+
+#begin endless array
+echo '['
+
+#send empty first array of blocks, makes loop simpler
+echo '[],'
+
+#send info forever
+exec conky -c $HOME/script/.conkyrc-2

@@ -1,0 +1,9 @@
+[Unit]
+Description=Hard drive temperature monitor daemon
+
+[Service]
+ExecStart=
+ExecStart=/usr/bin/hddtemp -dF /dev/sda /dev/sdb
+
+[Install]
+WantedBy=multi-user.target

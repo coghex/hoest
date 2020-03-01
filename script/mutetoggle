@@ -1,0 +1,2 @@
+#!/bin/fish
+amixer -c 0 sget 'Auto-Mute Mode' | fgrep -q "Item0: 'E"; and set -x M Disabled; or set -x M Enabled; amixer -qc 0 sset 'Auto-Mute Mode' $M
