@@ -7,7 +7,7 @@ or other application using the libvirt API.
 
 <domain type='kvm'>
   <name>fenriz</name>
-  <uuid>[REDACTED]</uuid>
+  <uuid>15251a69-460f-4888-b1ec-ef3f754aef60</uuid>
   <title>fenriz</title>
   <description>windoze vm 1</description>
   <memory unit='KiB'>11718750</memory>
@@ -21,7 +21,7 @@ or other application using the libvirt API.
   </os>
   <features>
     <acpi/>
-    <apic/>
+    <apic eoi='on'/>
     <hyperv>
       <relaxed state='on'/>
       <vapic state='on'/>
@@ -41,8 +41,10 @@ or other application using the libvirt API.
     </hyperv>
     <kvm>
       <hidden state='on'/>
+      <hint-dedicated state='on'/>
     </kvm>
     <vmport state='off'/>
+    <msrs unknown='ignore'/>
   </features>
   <cpu mode='host-passthrough' check='none'>
     <topology sockets='1' cores='4' threads='2'/>
@@ -69,6 +71,12 @@ or other application using the libvirt API.
       <target dev='sda' bus='sata'/>
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='writeback'/>
+      <source file='/ssd/samsung860'/>
+      <target dev='sdb' bus='sata'/>
+      <address type='drive' controller='0' bus='0' target='0' unit='1'/>
+    </disk>
     <controller type='pci' index='0' model='pci-root'/>
     <controller type='sata' index='0'>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
@@ -85,13 +93,13 @@ or other application using the libvirt API.
       <source>
         <address domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0' multifunction='on'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
         <address domain='0x0000' bus='0x01' slot='0x00' function='0x1'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x0a' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x1' multifunction='on'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
@@ -107,28 +115,9 @@ or other application using the libvirt API.
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <source>
-        <address domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
-      </source>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x08' function='0x0'/>
-    </hostdev>
-    <hostdev mode='subsystem' type='pci' managed='yes'>
-      <source>
         <address domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
       </source>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x0b' function='0x0'/>
-    </hostdev>
-    <hostdev mode='subsystem' type='pci' managed='yes'>
-      <source>
-        <address domain='0x0000' bus='0x0b' slot='0x00' function='0x0'/>
-      </source>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x0c' function='0x0'/>
-    </hostdev>
-    <hostdev mode='subsystem' type='usb' managed='yes'>
-      <source>
-        <vendor id='0x8087'/>
-        <product id='0x0029'/>
-      </source>
-      <address type='usb' bus='0' port='1'/>
     </hostdev>
     <memballoon model='virtio'>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
