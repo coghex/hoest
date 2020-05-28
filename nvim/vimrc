@@ -1,5 +1,6 @@
-colorscheme delek
-syntax enable
+syntax on
+set encoding=utf-8
+set clipboard=unnamedplus
 set tabstop=8
 set softtabstop=0
 set expandtab
@@ -7,7 +8,6 @@ set shiftwidth=4
 set smarttab
 set number
 set cursorline
-filetype indent on
 set wildmenu
 set showmatch
 set incsearch
@@ -21,7 +21,7 @@ nnoremap k gk
 nnoremap gV `[v`]
 nnoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 nnoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-augroup tags
-au BufWritePost *.hs    silent !init-tags %
-au BufWritePost *.hsc   silent !init-tags %
-augroup END
+
+" imports digraphs for symbols
+" that work in most linux fonts
+source ~/.vimdgrc
