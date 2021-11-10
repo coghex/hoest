@@ -1,28 +1,31 @@
 {
+    "codeLens.enable": true,
+    "diagnostic.virtualText": true,
     "languageserver": {
         "haskell": {
             "command": "haskell-language-server-wrapper",
-            "args": ["--lsp"],
-            "rootPatterns": ["*.cabal","stack.yaml", "cabal.project", "package.yaml","hie.yaml"],
-            "filetypes": ["haskell", "lhaskell"]
-        },
-        "bash": {
-            "command": "bash-language-server",
-            "args": ["start"],
-            "filetypes": ["sh"],
-            "ignoredRootPaths": ["~"]
-        },
-        "lua": {
-            "command": "/home/jari/build/lua-language-server/bin/Linux/lua-language-server",
-            "args": ["-E","-e"],
-            "filetypes": ["lua"]
-        },
-        "glsl": {
-            "command": "glslls",
-            "args": ["--stdin"],
-            "filetypes": ["vert","frag"]
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                ".stack.yaml",
+                ".hie-bios",
+                "BUILD.bazel",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                    "completionSnippetsOn": true,
+                    "hlintOn": true,
+                    "maxNumberOfProblems": 43
+                }
+            }
         }
-    },
-    "codeLens.enable": true,
-    "diagnostic.virtualText": true
+    }
 }

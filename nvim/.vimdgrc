@@ -1,0 +1,269 @@
+" digraphs for various utf-8 chars
+" vim defaults commented out
+" *** defaults not included:
+" -X ✠, !I ¡, AE Æ, ae æ, :. ∵,
+" .: ∴, 0( ∝, 00 ∞, /- †, /= ‡,
+" :X ※, Ob ∘, N0 №, Rx ℞, :3 ⋮,
+" 8R Ⅷ, 8r ⅷ, -! ↑, -v ↓, UD ↕.
+" digraphs that work in vanilla
+" UnicodeSyntax haskell:
+" digraph :: 8759 " ∷
+digraph => 8658 " ⇒ 
+" digraph -> 8594 " →
+" digraph <- 8592 " ←
+digraph >- 10522 " ⤚
+digraph -< 10521 " ⤙
+digraph >_ 10524 " ⤜
+digraph <_ 10523 " ⤛
+" digraph *2 9733 " ★
+" digraph FA 8704 " ∀
+digraph [\| 10214 " ⟦
+digraph \|] 10215 " ⟧
+digraph <\| 10631 " ⦇
+digraph \|> 10632 " ⦈
+" base-unicode-symbols on hackage
+" applicatives:
+digraph *O 8859 " ⊛ sequence
+digraph ES 8709 " ∅ empty set
+" monads:
+digraph >> 8811 " ≫ sequence
+digraph <{ 8610 " ↢ compose L
+digraph }> 8611 " ↣ compose R
+" category and arrow
+" digraph Ob 8728 " ∘ f(g(x))
+digraph <\" 8920 " ⋘ compose L
+digraph >\" 8921 " ⋙ compose R
+digraph *: 8258 " ⁂
+digraph 3\| 10996 " ⫴
+" boolean:
+digraph AN 8743 " ∧ and
+digraph OR 8744 " ∨ or
+" digraph NO 172 " ¬ not
+digraph !_ 8891 " ⊻ xor
+digraph /_ 8892 " ⊼ nand
+digraph ._ 8893 " ⊽ nor
+" eq and ord
+digraph == 8801 " ≡ equal to
+digraph \= 8802 " ≢ not equal
+digraph != 8800 " ≠ not equal
+" digraph =< 8804 " ≤ lte
+" digraph >= 8805 " ≥ gte
+digraph /< 8814 " ≮ not lt
+digraph /> 8815 " ≯ not gt
+" list and foldable
+digraph eo 8712 " ∈ element of
+digraph ST 8715 " ∋ such that
+digraph ne 8713 " ∉ not element
+digraph NS 8716 " ∌ not such
+digraph ++ 10746 " ⧺ append
+" digraph )U 8746 " ∪ union
+" digraph (U 8745 " ∩ join
+digraph !! 8252 " ‼ index
+digraph ep 949 " ε empty list
+" prelude and numerics:
+digraph NN 8469 " ℕ natural
+digraph pi 960 " π pi
+" digraph -: 247 " ÷ div
+" digraph *X 215 " × mult
+" digraph Sb 8901 " ∙ dot
+" digraph -T 8869 " ⊥ undefined
+digraph .\| 8739 " ∣ divides
+digraph /\| 874 " ∤ not devides
+digraph ZZ 8484 " ℤ integer
+digraph QQ 8474 " ℚ rational
+" set and containers:
+digraph <t 8882 " ⊲ subgroup of
+digraph >t 8883 " ⊳ has subgroup
+digraph BT 8904 " ⋈ bowtie
+digraph LP 8710 " ∆
+digraph NB 8711 " ∇
+" digraph (_ 8838 " ⊆
+" digraph )_ 8839 " ⊇
+" digraph (C 8834 " ⊂
+" digraph )C 8835 " ⊃
+digraph )/ 8837 " ⊅
+digraph (/ 8836 " ⊄
+digraph C/ 8840 " ⊈
+digraph u/ 8841 " ⊉
+" generic set and type theory
+digraph CC 8450 " ℂ constant
+digraph CM 8705 " ∁ class
+digraph RR 8477 " ℝ real
+digraph DD 8517 " ⅅ data
+digraph dd 8518 " ⅆ data alt
+digraph PP 8473 " ℙ pointer
+digraph BB 8492 " ℬ bool
+digraph TE 8707 " ∃ there exists
+digraph NE 8708 " ∄ not exists
+digraph \|\| 8741 " ∥ parallel
+digraph BL 8905 " ⋉
+digraph BR 8906 " ⋊
+digraph \|- 8866 " ⊢
+digraph -\| 8867 " ⊣
+digraph \|! 8868 " ⊤
+digraph PF 8916 " ⋔
+" generic operators and arrows
+digraph b& 8963 " ⌃
+digraph b\| 8964 " ⌄
+digraph <x 9003 " ⌫
+digraph >x 8998 " ⌦
+digraph au 9737 " ☉
+digraph bk 9098 " ⎊
+digraph sp 9251 " ␣
+digraph [b 8847 " ⊏
+digraph ]b 8848 " ⊐
+digraph nb 8851 " ⊓
+digraph ub 8852 " ⊔
+digraph <. 8918 " ⋖
+digraph .> 8919 " ⋗
+digraph <P 8826 " ≺
+digraph >P 8827 " ≻
+digraph 3> 9886 " ⚞
+digraph <E 9887 " ⚟
+digraph =? 8799 " ≟
+digraph i& 8523 " ⅋
+digraph 2> 8608 " ↠
+digraph 2< 8606 " ↞
+digraph <= 8656 " ⇐
+digraph ,. 8596 " ↔
+digraph <> 8660 " ⇔
+digraph <f 9753 " ☙
+digraph >f 10087 " ❧
+digraph L< 10226 " ⟲
+digraph L> 10227 " ⟳
+digraph 3. 8230 " …
+digraph zz 8961 " ⌁
+" generic variables
+digraph HH 8461 " ℍ
+digraph hh 8462 " ℎ
+digraph hb 8463 " ℏ
+digraph Rr 8476 " ℜ
+digraph iG 8513 " ⅁
+digraph iY 8516 " ⅄
+digraph pr 8524 " ⅌
+digraph PL 8522 " ♇
+digraph cl 8452 " ℄
+digraph eu 8455 " ℇ
+digraph sc 8456 " ℈
+digraph Oc 9934 " ⛎
+digraph Px 9767 " ☧
+digraph PX 11497 " ⳩
+" cool symbols
+digraph qd 8718 " ∎ q.e.d.
+digraph cg 9881 " ⚙ gear cog
+digraph Cf 9904 " ⚰ grave
+digraph Jx 9769 " ☩ cross
+digraph ct 9096 " ⎈ helm
+digraph an 9875 " ⚓ anchor
+digraph Fw 9880 " ⚘ flower
+digraph Fl 9884 " ⚜ flur
+digraph ch 8889 " ⊹ crosshair
+digraph ps 8982 " ⌖ crosshair alt
+digraph hp 9874 " ⚒ h&c
+digraph lb 8468 " ℔ pounds
+digraph oz 8485 " ℥ ounces
+digraph kn 8977 " ⌑ oldbash
+digraph cd 8984 " ⌘ cmd
+digraph es 9099 " ⎋ escape
+digraph ej 9167 " ⏏ eject
+digraph rt 9166 " ⏎ return
+digraph gd 9178 " ⏚ ground
+digraph SR 9752 " ☘ shamrock
+digraph Jr 9760 " ☠ jollyroger
+digraph Ra 9762 " ☢ radiation
+digraph Bh 9763 " ☣ biohazard
+digraph At 9883 " ⚛ atomic
+digraph cm 9773 " ☭ commie
+digraph Pc 9774 " ☮ peace
+digraph Yy 9775 " ☯ yinyang
+digraph Ox 9766 " ☦ orthodox
+digraph Ak 9765 " ☥ ankh
+digraph Lx 9768 " ☨ coptic
+" generic symbols
+digraph Rc 9851 " ♻
+digraph d1 9856 " ⚀
+digraph d2 9857 " ⚁
+digraph d3 9858 " ⚂
+digraph d4 9859 " ⚃
+digraph d5 9860 " ⚄
+digraph d6 9861 " ⚅
+digraph wf 9872 " ⚐
+digraph bf 9873 " ⚑
+digraph +O 8853 " ْ⊕
+digraph -O 8854 " ⊖
+digraph /O 8856 " ⊘
+digraph .O 8857 " ⊙
+digraph oO 8858 " ⊚
+digraph =O 8860 " ⊜
+digraph 1O 9312 " ①
+digraph 2O 9313 " ②
+digraph 3O 9314 " ③
+digraph 4O 9315 " ④
+digraph 5O 9316 " ⑤
+digraph 6O 9317 " ⑥
+digraph 7O 9318 " ⑦
+digraph 8O 9319 " ⑧
+digraph 9O 9320 " ⑨
+digraph SM 8480 " ℠
+digraph AS 8525 " ⅍
+digraph NU 9216 " ␀
+digraph NL 9252 " ␤
+digraph AK 9222 " ␆
+digraph ac 8448 " ℀
+digraph as 8449 " ℁
+" extra symbols
+digraph Cd 9764 " ☤
+digraph Is 9770 " ☪
+digraph Ir 9771 " ☫
+digraph Kh 9772 " ☬
+digraph Ag 9790 " ☾
+digraph Cm 9789 " ☽
+digraph Hg 9791 " ☿
+digraph Cu 9792 " ♀
+digraph SB 9793 " ♁
+digraph Fe 9794 " ♂
+digraph Sn 9795 " ♃
+digraph Pb 9796 " ♄
+digraph Un 9797 " ♅
+digraph Np 9798 " ♆
+digraph PL 9799 " ⚴
+digraph Ar 9800 " ♈
+digraph Tr 9801 " ♉
+digraph Gm 9802 " ♊
+digraph Cn 9803 " ♋
+digraph Le 9804 " ♌
+digraph Vr 9805 " ♍
+digraph Lb 9806 " ♎
+digraph Sc 9807 " ♏
+digraph Sg 9808 " ♐
+digraph Cp 9809 " ♑
+digraph Aq 9810 " ♒
+digraph Ps 9811 " ♓
+digraph Ca 9877 " ⚕
+digraph Jd 9878 " ⚖
+digraph Al 9879 " ⚗
+digraph Sh 9882 " ⚚
+digraph Ur 9905 " ⚱
+digraph Ce 9907 " ⚳
+digraph Pl 9908 " ⚴
+digraph Vs 9910 " ⚶
+digraph Cr 9911 " ⚷
+digraph Bm 9912 " ⚸
+" these render amiguously wide, ymmv
+digraph iP 9957 " ⛥
+digraph CS 9960 " ⛨
+digraph So 9961 " ⛩
+digraph Ct 9963 " ⛫
+digraph Tf 9964 " ⛬
+digraph Cs 9974 " ⛶
+digraph Gy 9980 " ⛼
+digraph Jn 9909 " ⛻
+digraph Jn 9979 " ⛻
+digraph Pg 9957 " ⛥
+digraph 0O 9450 " ⓪
+digraph b> 10616 " ⥸
+digraph b< 10614 " ⥶
+digraph <I 10502 " ⤆
+digraph I> 10503 " ⤇
+digraph E- 10620 " ⥼
+digraph -3 10621 " ⥽
