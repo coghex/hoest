@@ -23,11 +23,12 @@ if test $wid -gt 170
   end
 end
 if test $wid -gt 100
-  tmux split-window -v
+  tmux split-window -v "hdc"
   tmux resize-pane -y 24
-  tmux select-pane -U
+  tmux swap-pane -t -1
+  clear
   if test (count $argv) -gt 0
     cd ~/work/$argv[1] 2>/dev/null
   end
-  hdc
+  cabal new-build
 end
