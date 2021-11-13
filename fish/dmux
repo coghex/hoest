@@ -3,14 +3,14 @@
 # provides the development environment i like depending on window size
 set wid (tput cols)
 set hgt (tput lines)
-if test (count $argv) -gt 1
+if test (count $argv) -gt 0
   cd ~/work/$argv[1] 2>/dev/null
 end
 if test $wid -gt 100
   tmux split-window -h
   tmux resize-pane -x 80
   tmux select-pane -L
-  if test (count $argv) -gt 1
+  if test (count $argv) -gt 0
     cd ~/work/$argv[1] 2>/dev/null
   end
 end
@@ -18,7 +18,7 @@ if test $wid -gt 170
   tmux split-window -h
   tmux select-pane -L
   tmux resize-pane -x (expr $wid - 162)
-  if test (count $argv) -gt 1
+  if test (count $argv) -gt 0
     cd ~/work/$argv[1] 2>/dev/null
   end
 end
@@ -26,7 +26,7 @@ if test $wid -gt 100
   tmux split-window -v
   tmux resize-pane -y 24
   tmux select-pane -U
-  if test (count $argv) -gt 1
+  if test (count $argv) -gt 0
     cd ~/work/$argv[1] 2>/dev/null
   end
   hdc
