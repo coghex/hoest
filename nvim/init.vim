@@ -11,8 +11,14 @@ call plug#begin(stdpath('data').'/plugged')
   Plug 'wellle/tmux-complete.vim'
   Plug 'hasufell/ghcup.vim'
   Plug 'rbgrouleff/bclose.vim'
+  Plug 'neovim/nvim-lspconfig'
 call plug#end()
 source ~/.vimrc
+lua << EOF
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.jsonls.setup{}
+EOF
 " inoremap <expr> <TAB> pumvisible() ? "\<c-n>" : "\<TAB>"
 " inoremap <expr> <S-TAB> pumvisible() ? "\<c-p>" : "\<S-TAB>"
 nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
@@ -54,6 +60,9 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" haskell fast-tags on exit of .hs files
+autocmd BufWritePost *.hs silent :! fast-tags -R ./
 
 nnoremap <silent><nowait><expr> <C-l> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-l>"
 nnoremap <silent><nowait><expr> <C-h> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-h>"
